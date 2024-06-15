@@ -59,7 +59,7 @@ INSERT INTO Clientes (nombre, direccion, telefono) VALUES
 ('Fede', 'Avenida lalala', '111222333'),
 ('Tatiana', 'calle lalala-la', '111222333');
 
--- Insertar información de ejemplo en la tabla de Stock
+-- Insertar información en Stock
 INSERT INTO Stock (id_producto, cantidad) VALUES
 (1, 20),
 (2, 40),
