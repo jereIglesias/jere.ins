@@ -1,56 +1,96 @@
--- SCRIPT DE SQL
 
--- Crear la base de datos
 CREATE DATABASE kiosco;
 
--- Usar la base de datos
 USE kiosco;
 
--- Crear la tabla Ckiosco
-CREATE TABLE kiosco (
-    kio_ID INT AUTO_INCREMENT,
-    kio_NOMBRE VARCHAR(100) NOT NULL,
-    kio_DIRECCION VARCHAR(255),
-    PRIMARY KEY (COM_ID) -- indice
+CREATE TABLE Productos (
+    id_producto INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100),
+    descripcion TEXT,
+    precio DECIMAL(10, 2),
+    categoria VARCHAR(50)
 );
--- Crear la tabla Productos
-CREATE TABLE PRODUCTOS (
-    PRO_ID INT ,
-    PRO_NOMBRE VARCHAR(100) NOT NULL,
-    PRO_PRECIO DECIMAL(10, 2) NOT NULL,
-    PRO_kio_ID INT,
-    PRIMARY KEY (PRO_ID),
-    FOREIGN KEY (PRO_kio_ID) REFERENCES kiosco(COM_ID)
+
+CREATE TABLE Stock (
+    id_stock INT PRIMARY KEY AUTO_INCREMENT,
+    id_producto INT,
+    cantidad INT,
+    FOREIGN KEY (id_producto) REFERENCES Productos(id_producto)
+    
 );
--- Crear la tabla Ventas
-CREATE TABLE VENTAS (
-    VEN_ID INT,
-    VEN_FECHA DATE NOT NULL,
-    VEN_POR_ID INT,
-    Cantidad INT NOT NULL,
-    PRIMARY KEY (VentaID),
-    FOREIGN KEY (VEN_POR_ID) REFERENCES PRODUCTOS(PRO_ID)
+-- acá me di cuenta de que sería mejor poner el id de cada categoria en lugar del nombre, así que creé otra tabla en la que puse las categorias.
+CREATE TABLE Categorias (
+    id_categoria INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50)
 );
--- Insertar datos en la tabla Comercios
-INSERT INTO kiosco (COR_NOMBRE, COR_DIRECCION) VALUES 
-('kiosco avenida', '111 breown');
-INSERT INTO kiosco (COR_NOMBRE, COR_DIRECCION) VALUES 
-('kiosco rotonda', '222 calfucura');
+-- la tabla en la que van los clientes, esta me va a servir para las transacciones tambien
+CREATE TABLE Clientes (
+    id_cliente INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100),
+    direccion VARCHAR(255),
+    telefono VARCHAR(15)
+);
+-- transacciones
+CREATE TABLE Transacciones (
+    id_transaccion INT PRIMARY KEY AUTO_INCREMENT,
+    id_cliente INT,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente)
+);
+-- acá puse los detalles especificos de la transacción
+CREATE TABLE Detalle_Transaccion (
+    id_detalle INT PRIMARY KEY AUTO_INCREMENT,
+    id_transaccion INT,
+    id_producto INT,
+    cantidad INT,
+    precio_unitario DECIMAL(10, 2),
+    FOREIGN KEY (id_transaccion) REFERENCES Transacciones(id_transaccion),
+    FOREIGN KEY (id_producto) REFERENCES Productos(id_producto)
+);
+-- Insertar información de ejemplo en la tabla de Productos
+INSERT INTO Productos (nombre, descripcion, precio, categoria) VALUES
+('oreos', 'galletitas rellenas', 900.00, 'Snacks'),
+('coca-cola', 'botella de 1,5 litros de coca', 2500.00, 'Bebidas'),
+('aguila', 'Barra de chocolate', 3600.00, 'Snacks'),
+('Agua', 'Botella de agua mineral', 600.00, 'Bebidas');
+
+INSERT INTO Clientes (nombre, direccion, telefono) VALUES
+('Jere', 'Calle lalala', '111222333'),
+('Fede', 'Avenida lalala', '111222333'),
+('Tatiana', 'calle lalala-la', '111222333');
+
+-- Insertar información de ejemplo en la tabla de Stock
+INSERT INTO Stock (id_producto, cantidad) VALUES
+(1, 20),
+(2, 40),
+(3, 30),
+(4, 40);
+
+INSERT INTO Categorias (nombre) VALUES
+('Snack'),
+('Bebida'),
+('Otros');
+
+ALTER TABLE Productos
+ADD COLUMN id_categoria INT,
+ADD FOREIGN KEY (id_categoria) REFERENCES Categorias(id_categoria);
+
+UPDATE Productos SET id_categoria = 1 WHERE nombre = 'oreos';
+UPDATE Productos SET id_categoria = 2 WHERE nombre = 'coca-cola';
+UPDATE Productos SET id_categoria = 1 WHERE nombre = 'aguila';
+UPDATE Productos SET id_categoria = 2 WHERE nombre = 'Agua';
+
+INSERT INTO Transacciones (id_cliente) VALUES
+(1), -- yo
+(2), -- Fede
+(3); -- Tatiana
 
 
--- Insertar datos en la tabla Productos
-INSERT INTO PRODUCTOS (PRO_NOMBRE, PRO_PRECIO, PRO_COM_ID) 
-VALUES ('speed', 1.700.00, 1);
-INSERT INTO PRODUCTOS (PRO_NOMBRE, PRO_PRECIO, PRO_COM_ID) 
-VALUES ('oreos', 800.00, 2);
-INSERT INTO PRODUCTOS (PRO_NOMBRE, PRO_PRECIO, PRO_COM_ID) 
-VALUES ('doritos', 2.100.00, 1);
+-- detalles de las transacciones
+INSERT INTO Detalle_Transaccion (id_transaccion, id_producto, cantidad, precio_unitario) VALUES
+(@transaccion_jere, 1, 2, 2.50), -- yo compre 2 oreos
+(@transaccion_fede, 2, 1, 1.20), -- fede compro una coca
+(@transaccion_fede, 3, 2, 1.00), -- fede compro dos aguilas
+(@transaccion_tatiana, 4, 3, 0.80); -- Tatiana compro 3 Aguas
 
 
--- Insertar datos en la tabla Ventas
-INSERT INTO VENTAS (VEN_FECHAS, VEN_PROD, VEN_CANTIDAD) 
-VALUES ('2024-05-01', 1, 3);
-INSERT INTO VENTAS (VEN_FECHAS, VEN_PROD, VEN_CANTIDAD) 
-VALUES ('2024-05-02', 2, 2);
-INSERT INTO VENTAS (VEN_FECHAS, VEN_PROD, VEN_CANTIDAD) 
-VALUES ('2024-05-03', 3, 5);
