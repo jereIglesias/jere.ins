@@ -1,0 +1,73 @@
+{
+  "recursos": {
+    "items": {
+      "descripcion": "muestra los artículos disponibles en el inventario."
+    }
+  },
+  "endpoints": [
+    {
+      "metodo": "GET",
+      "url": "/api/items",
+      "descripcion": "Devuelve una lista de todos los artículos disponibles en el inventario."
+    },
+    {
+      "metodo": "GET",
+      "url": "/api/items/{id}",
+      "descripcion": "Devuelve la información de un artículo en específico identificado por su ID."
+    },
+    {
+      "metodo": "POST",
+      "url": "/api/items",
+      "descripcion": "Crea un artículo nuevo usando los datos proporcionados en el body de la solicitud."
+    },
+    {
+      "metodo": "PUT",
+      "url": "/api/items/{id}",
+      "descripcion": "Actualiza la información de un artículo específico identificado por su ID con los datos proporcionados en el body."
+    },
+    {
+      "metodo": "DELETE",
+      "url": "/api/items/{id}",
+      "descripcion": "Elimina un artículo específico identificado por su ID."
+    }
+  ],
+  "ejemploDatos": {
+    "item": {
+      "id": 1,
+      "nombre": "Artículo A",
+      "precio": 120
+    }
+  },
+  "ejemploSolicitudes": [
+    {
+      "metodo": "GET",
+      "url": "/api/items",
+      "respuesta": [
+        { "id": 1, "nombre": "Artículo A", "precio": 120 },
+        { "id": 2, "nombre": "Artículo B", "precio": 250 }
+      ]
+    },
+    {
+      "metodo": "GET",
+      "url": "/api/items/1",
+      "respuesta": { "id": 1, "nombre": "Artículo A", "precio": 120 }
+    },
+    {
+      "metodo": "POST",
+      "url": "/api/items",
+      "cuerpoSolicitud": { "nombre": "Artículo C", "precio": 350 },
+      "respuesta": { "id": 3, "nombre": "Artículo C", "precio": 350 }
+    },
+    {
+      "metodo": "PUT",
+      "url": "/api/items/1",
+      "cuerpoSolicitud": { "nombre": "Artículo A Modificado", "precio": 180 },
+      "respuesta": { "id": 1, "nombre": "Artículo A Modificado", "precio": 180 }
+    },
+    {
+      "metodo": "DELETE",
+      "url": "/api/items/1",
+      "respuesta": { "mensaje": "Artículo eliminado." }
+    }
+  ]
+}
