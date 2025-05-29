@@ -1,0 +1,7 @@
+
+hay que ejecutar una vez  
+ python crear_db.py
+y despues 
+python app.py
+
+luego, entrando a esta dirección http://127.0.0.1:5000/  salen los datos.
