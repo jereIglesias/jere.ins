@@ -1,0 +1,39 @@
+class Reloj:
+    def __init__(self, hora, minutos, segundos):
+        self.__hora = hora
+        self.__minutos = minutos
+        self.__segundos = segundos
+
+    def mostrar(self):
+        return f"{self.__hora:02d}:{self.__minutos:02d}:{self.__segundos:02d}"
+
+    def adelantar_minutos(self, minutos=1):
+        total = self.__minutos + minutos
+        self.__hora = (self.__hora + total // 60) % 24
+        self.__minutos = total % 60
+
+    def cambiar_hora(self, hora, minutos, segundos):
+        self.__hora = hora
+        self.__minutos = minutos
+        self.__segundos = segundos
+
+    def igual_a(self, otro):
+        return self.__hora == otro.__hora and self.__minutos == otro.__minutos and self.__segundos == otro.__segundos
+
+# Prueba de la clase
+if __name__ == "__main__":
+    r1 = Reloj(10, 30, 15)
+    r2 = Reloj(12, 45, 50)
+    r3 = Reloj(23, 59, 59)
+
+    print("Reloj 1:", r1.mostrar())
+    print("Reloj 2:", r2.mostrar())
+    print("Reloj 3:", r3.mostrar())
+
+    r1.adelantar_minutos()
+    print("Reloj 1 tras adelantar 1 minuto:", r1.mostrar())
+
+    r2.cambiar_hora(8, 0, 0)
+    print("Reloj 2 tras cambiar hora:", r2.mostrar())
+
+    print("¿Reloj 2 y Reloj 3 tienen la misma hora?", r2.igual_a(r3))
