@@ -1,6 +1,5 @@
 # Aplicación CRUD con React Native y SQLite
 
-Esta es una aplicación móvil simple que implementa operaciones CRUD (Crear, Leer, Actualizar, Eliminar) utilizando SQLite como base de datos local.
 
 ## Características
 
@@ -24,6 +23,6 @@ Esta es una aplicación móvil simple que implementa operaciones CRUD (Crear, Le
 
 1. Asegúrate de tener instalado Node.js y Expo CLI
 2. Clona este repositorio
-3. Ejecuta `npm install` para instalar las dependencias
-4. Ejecuta `npx expo start` para iniciar el proyecto
-5. Usa la aplicación Expo Go en tu dispositivo móvil o un emulador para ver la aplicación
+3. Ejecuta npm install para instalar las dependencias
+4. Ejecuta npx expo start para iniciar el proyecto (aveces se traba y hay q usar el clear o el -c, capaz es x mi pc
+5. para abrirla podes usar expo go o algun emulador de android
