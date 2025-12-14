@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Estadísticas</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Estadísticas</h1>
+      <a href="/">Volver</a>
+      <section>
+        <h2>Global</h2>
+        <div id="globalStats">Cargando...</div>
+      </section>
+      <section>
+        <h2>Por sesión</h2>
+        <form id="formStatsSesion">
+          <label>Sesión ID<br><input type="number" name="sesion_id" required></label><br>
+          <button type="submit">Ver</button>
+        </form>
+        <div id="sesionStats"></div>
+      </section>
+    </main>
+    <script src="/static/main.js"></script>
+  </body>
+</html>

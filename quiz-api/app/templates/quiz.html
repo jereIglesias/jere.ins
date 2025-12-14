@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quiz - Modo Práctica</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="topbar">
+        <div class="logo">🎓 Quiz Interactivo</div>
+        <a href="/">← Volver</a>
+      </div>
+
+      <!-- SECCIÓN DE INICIO -->
+      <section id="setup" class="quiz-card">
+        <h2>¿Listo para el desafío?</h2>
+        <p style="color: #6b7280; margin-bottom: 24px; font-size: 16px;">
+          Responde preguntas de opción múltiple y pon a prueba tus conocimientos.
+        </p>
+        <div class="row">
+          <label style="display: flex; align-items: center; gap: 10px;">
+            <span>Cantidad de preguntas:</span>
+            <input id="cantidad" type="number" value="5" min="1" max="20" />
+          </label>
+          <button id="startQuiz">▶ Empezar Quiz</button>
+        </div>
+        <div id="setupMsg" class="small" style="margin-top: 12px;"></div>
+      </section>
+
+      <!-- SECCIÓN DE PREGUNTA -->
+      <section id="questionArea" style="display:none;">
+        <!-- Barra de progreso -->
+        <div class="progress-bar" style="margin-bottom: 24px;">
+          <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+        </div>
+
+        <!-- Información de progreso y puntuación -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
+          <div class="small">
+            Pregunta <strong id="curIdx">1</strong> de <strong id="totalCount">5</strong>
+          </div>
+          <div class="score-badge">
+            ✓ Aciertos: <span id="correctCount">0</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta de pregunta -->
+        <div class="quiz-card">
+          <h3 id="enunciado">Cargando pregunta...</h3>
+          <div id="options" class="options"></div>
+          <div id="feedback" class="small" style="margin-top: 16px; display: none;"></div>
+        </div>
+
+        <!-- Botón siguiente -->
+        <div class="row" style="justify-content: center; margin-top: 24px;">
+          <button id="nextBtn" class="secondary" style="display: none;">
+            Siguiente →
+          </button>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE RESULTADOS -->
+      <section id="resultArea" style="display:none;" class="container-center">
+        <div class="result-box">
+          <h2>¡Cuestionario Completado!</h2>
+          <div class="result-score" id="score">0/0</div>
+          <div class="result-percentage" id="percentage">0%</div>
+          <p style="color: #6b7280; margin-bottom: 28px; font-size: 16px;">
+            <span id="resultMessage">¡Excelente trabajo!</span>
+          </p>
+          <button onclick="location.reload()">🔄 Volver a Jugar</button>
+          <button class="secondary" onclick="window.location.href='/';" style="margin-left: 12px;">← Ir al Inicio</button>
+        </div>
+
+        <!-- Resumen de respuestas -->
+        <div class="quiz-card">
+          <h3 style="text-align: left; color: #4f46e5;">Resumen de Respuestas</h3>
+          <div id="summaryContainer" style="margin-top: 20px;"></div>
+        </div>
+      </section>
+    </main>
+    <script src="/static/main.js"></script>
+  </body>
+</html>

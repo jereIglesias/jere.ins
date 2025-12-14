@@ -1,0 +1,75 @@
+INFO:     127.0.0.1:53963 - "GET /questions/random?limit=3 HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:53963 - "GET /statistics/global HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53963 - "GET /ui/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53970 - "GET /preguntas/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53970 - "GET /questions/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55713 - "GET /ui/quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55713 - "GET /static/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54188 - "GET /static/main.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:54188 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63436 - "POST /sesiones/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:63436 - "GET /preguntas/aleatorias?cantidad=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59241 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49950 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49542 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61062 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:65158 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:65158 - "POST /sesiones/1/finalizar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52470 - "GET /ui/quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52470 - "POST /sesiones/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52470 - "GET /preguntas/aleatorias?cantidad=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55229 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:60180 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51192 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:59886 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:60058 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:63426 - "POST /sesiones/2/finalizar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60267 - "GET /ui/quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63200 - "POST /sesiones/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:63200 - "GET /preguntas/aleatorias?cantidad=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63200 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50314 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52841 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56635 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57697 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:64478 - "POST /sesiones/3/finalizar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52235 - "GET /ui/quiz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52235 - "GET /static/styles.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51004 - "GET /static/main.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62601 - "POST /sesiones/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62601 - "GET /preguntas/aleatorias?cantidad=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52333 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52079 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:63798 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:60972 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:60617 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:52518 - "POST /sesiones/4/finalizar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63853 - "GET / HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:63853 - "GET /ui/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60035 - "POST /sesiones/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:60035 - "GET /preguntas/aleatorias?cantidad=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60035 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:58696 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:53835 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:53835 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:55639 - "POST /respuestas/ HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62936 - "POST /sesiones/5/finalizar HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55789 - "GET / HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:55789 - "GET /ui/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58365 - "GET / HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58365 - "GET /ui/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58365 - "GET /ui/preguntas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58365 - "GET /preguntas/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51186 - "GET / HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:51186 - "GET /ui/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51186 - "GET /ui/sesiones HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58512 - "GET / HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:58512 - "GET /ui/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58512 - "GET /ui/estadisticas HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58512 - "GET /estadisticas/global HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62000 - "GET / HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:62000 - "GET /ui/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62000 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62000 - "GET /openapi.json HTTP/1.1" 200 OK
+ INFO:     127.0.0.1:57321 - "GET /questions/random?limit=3 HTTP/1.1" 200 OK
+  

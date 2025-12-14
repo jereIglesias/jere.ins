@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sesiones - UI</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Sesiones</h1>
+      <a href="/ui/">Volver</a>
+      <section>
+        <h2>Crear sesión</h2>
+        <form id="formCrearSesion">
+          <label>Nombre de usuario (opcional)<br><input type="text" name="usuario_nombre"></label><br>
+          <button type="submit">Crear sesión</button>
+        </form>
+        <div id="crearSesionMsg"></div>
+      </section>
+      <section>
+        <h2>Finalizar sesión</h2>
+        <form id="formFinalizar">
+          <label>Sesión ID<br><input type="number" name="sesion_id" required></label><br>
+          <button type="submit">Finalizar</button>
+        </form>
+        <div id="finalizarMsg"></div>
+      </section>
+    </main>
+    <script src="/static/main.js"></script>
+  </body>
+</html>

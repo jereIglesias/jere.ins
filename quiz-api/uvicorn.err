@@ -1,0 +1,42 @@
+INFO:     Will watch for changes in these directories: ['C:\\Users\\estudiante\\Desktop\\EndgameApp\\quiz-api']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [17080] using WatchFiles
+C:\Users\estudiante\Desktop\EndgameApp\quiz-api\.venv\Lib\site-packages\pydantic\_internal\_config.py:383: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [13996]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\routers\api_v1.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [13996]
+C:\Users\estudiante\Desktop\EndgameApp\quiz-api\.venv\Lib\site-packages\pydantic\_internal\_config.py:383: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [6576]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app\routers\api_v1.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [6576]
+C:\Users\estudiante\Desktop\EndgameApp\quiz-api\.venv\Lib\site-packages\pydantic\_internal\_config.py:383: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [16516]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in '.venv\Lib\site-packages\pydantic_settings\sources\providers\dotenv.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\nested_secrets.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\__init__.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\secrets.py', '.venv\Lib\site-packages\pydantic_settings\sources\utils.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\yaml.py', '.venv\Lib\site-packages\pydantic_settings\sources\__init__.py', '.venv\Lib\site-packages\pydantic_settings\__init__.py', '.venv\Lib\site-packages\pydantic_settings\utils.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\cli.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\aws.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\gcp.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\toml.py', '.venv\Lib\site-packages\pydantic_settings\version.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\pyproject.py', '.venv\Lib\site-packages\pydantic_settings\sources\types.py', '.venv\Lib\site-packages\pydantic_settings\exceptions.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\env.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\json.py', '.venv\Lib\site-packages\pydantic_settings\main.py', '.venv\Lib\site-packages\pydantic_settings\sources\base.py', '.venv\Lib\site-packages\pydantic_settings\sources\providers\azure.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [16516]
+C:\Users\estudiante\Desktop\EndgameApp\quiz-api\.venv\Lib\site-packages\pydantic\_internal\_config.py:383: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+INFO:     Started server process [17528]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.

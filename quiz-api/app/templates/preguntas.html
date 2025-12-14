@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Preguntas</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Preguntas</h1>
+      <a href="/">Volver</a>
+
+      <section id="crear">
+        <h2>Crear pregunta</h2>
+        <form id="formCrear">
+          <label>Enunciado<br><input type="text" name="enunciado" required></label><br>
+          <label>Opciones (separadas por `|`)<br><input type="text" name="opciones" required></label><br>
+          <label>Índice respuesta correcta (0-based)<br><input type="number" name="respuesta_correcta" value="0" min="0"></label><br>
+          <label>Categoria<br><input type="text" name="categoria"></label><br>
+          <label>Dificultad (1-5)<br><input type="number" name="dificultad" min="1" max="5"></label><br>
+          <button type="submit">Crear</button>
+        </form>
+        <div id="crearMsg"></div>
+      </section>
+
+      <section id="lista">
+        <h2>Lista de preguntas</h2>
+        <div id="preguntasContainer">Cargando...</div>
+      </section>
+    </main>
+    <script src="/static/main.js"></script>
+  </body>
+</html>
